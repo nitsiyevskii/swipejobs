@@ -14,7 +14,7 @@ const JobHeaderSection: React.FC<JobHeaderSectionProps> = ({
   company,
 }) => (
   <View>
-    <Image source={{ uri: imageUrl }} style={styles.headerImage} />
+    <Image source={{ uri: imageUrl }} style={styles.headerImage} accessibilityRole="image" />
     <Text style={styles.title}>{title}</Text>
     <Text style={styles.company}>{company}</Text>
   </View>
