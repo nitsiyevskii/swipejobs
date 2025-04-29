@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { Job } from '../types/job';
+import { Job } from "../types/job";
 
 const workerId = "7f90df6e-b832-44e2-b624-3143d428001f";
 
@@ -12,7 +12,7 @@ export const fetchJobs = createAsyncThunk("jobs/fetchJobs", async () => {
 });
 
 export const acceptJob = createAsyncThunk(
-  'jobs/acceptJob',
+  "jobs/acceptJob",
   async ({ workerId, jobId }: { workerId: string; jobId: string }) => {
     console.log("acceptJob", workerId, jobId);
     const response = await axios.get(
@@ -23,7 +23,7 @@ export const acceptJob = createAsyncThunk(
 );
 
 export const rejectJob = createAsyncThunk(
-  'jobs/rejectJob',
+  "jobs/rejectJob",
   async ({ workerId, jobId }: { workerId: string; jobId: string }) => {
     const response = await axios.get(
       `https://test.swipejobs.com/api/worker/${workerId}/job/${jobId}/reject`

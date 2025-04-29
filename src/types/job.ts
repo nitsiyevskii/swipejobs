@@ -33,4 +33,4 @@ export interface Job {
   requirements?: string[];
   shifts: Shift[];
   wagePerHourInCents: number;
-} 
+}
